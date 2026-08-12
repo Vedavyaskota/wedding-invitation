@@ -86,6 +86,10 @@ const CONFIG = {
 
 const $ = (id) => document.getElementById(id);
 
+/* always start at the sealed cover, even after a refresh mid-page */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 /* ---------- traditional line-art icons for the timeline ---------- */
 const ICONS = {
   haldi: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M9 22h30c-1 10-8 15-15 15S10 32 9 22z"/><path d="M14 22c3-3 17-3 20 0"/><path d="M24 15c0-4 3-5 3-8 3 3 4 6-3 8z"/></svg>',
@@ -245,7 +249,7 @@ function openInvitation() {
   spawnPetals(burst, 26, true);
   setTimeout(() => burst.remove(), 12000);
 
-  setTimeout(() => cover.classList.add('gone'), 2800);
+  setTimeout(() => cover.classList.add('gone'), 3200);
 }
 cover.addEventListener('click', openInvitation);
 cover.addEventListener('keydown', (e) => {
