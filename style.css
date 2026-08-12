@@ -66,14 +66,28 @@ body.opened .page-frame { opacity: .85; }
   opacity: 0; transition: opacity 2.2s ease;
 }
 #cover.opening .cover-glow { opacity: 1; }
-#cover .petals { z-index: 3; }
+
+/* static marigold toranam garland hanging over the doorway */
+.cover-toranam {
+  position: absolute; top: 0; left: 0; right: 0; height: 104px;
+  z-index: 4; pointer-events: none;
+  background-image:
+    linear-gradient(180deg, #9a7a17, #e8c96a 45%, #9a7a17),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='96' viewBox='0 0 64 96'%3E%3Cpath d='M0 8 Q32 22 64 8' fill='none' stroke='%23c9a227' stroke-width='2.5'/%3E%3Cline x1='16' y1='14' x2='16' y2='80' stroke='%239a7a17' stroke-width='1.4'/%3E%3Cline x1='48' y1='12' x2='48' y2='56' stroke='%239a7a17' stroke-width='1.4'/%3E%3Cellipse cx='8' cy='26' rx='5' ry='2.4' fill='%232e5d3a' transform='rotate(-32 8 26)'/%3E%3Cellipse cx='24' cy='50' rx='5' ry='2.4' fill='%232e5d3a' transform='rotate(28 24 50)'/%3E%3Cellipse cx='8' cy='68' rx='5' ry='2.4' fill='%232e5d3a' transform='rotate(-24 8 68)'/%3E%3Cellipse cx='56' cy='24' rx='5' ry='2.4' fill='%232e5d3a' transform='rotate(30 56 24)'/%3E%3Cellipse cx='40' cy='44' rx='5' ry='2.4' fill='%232e5d3a' transform='rotate(-28 40 44)'/%3E%3Ccircle cx='16' cy='18' r='7' fill='%23e07b12'/%3E%3Ccircle cx='16' cy='18' r='4' fill='%23f79824'/%3E%3Ccircle cx='16' cy='18' r='1.6' fill='%23ffd166'/%3E%3Ccircle cx='16' cy='31' r='6.5' fill='%23e07b12'/%3E%3Ccircle cx='16' cy='31' r='3.7' fill='%23f79824'/%3E%3Ccircle cx='16' cy='31' r='1.5' fill='%23ffd166'/%3E%3Ccircle cx='16' cy='43' r='6' fill='%23e07b12'/%3E%3Ccircle cx='16' cy='43' r='3.4' fill='%23f79824'/%3E%3Ccircle cx='16' cy='43' r='1.4' fill='%23ffd166'/%3E%3Ccircle cx='16' cy='55' r='5.5' fill='%23e07b12'/%3E%3Ccircle cx='16' cy='55' r='3.1' fill='%23f79824'/%3E%3Ccircle cx='16' cy='55' r='1.3' fill='%23ffd166'/%3E%3Ccircle cx='16' cy='66' r='5' fill='%23e07b12'/%3E%3Ccircle cx='16' cy='66' r='2.8' fill='%23f79824'/%3E%3Ccircle cx='16' cy='66' r='1.2' fill='%23ffd166'/%3E%3Ccircle cx='16' cy='76' r='4.4' fill='%23e07b12'/%3E%3Ccircle cx='16' cy='76' r='2.4' fill='%23f79824'/%3E%3Ccircle cx='16' cy='84' r='3' fill='%23c9622c'/%3E%3Ccircle cx='48' cy='16' r='7' fill='%23e07b12'/%3E%3Ccircle cx='48' cy='16' r='4' fill='%23f79824'/%3E%3Ccircle cx='48' cy='16' r='1.6' fill='%23ffd166'/%3E%3Ccircle cx='48' cy='29' r='6.3' fill='%23e07b12'/%3E%3Ccircle cx='48' cy='29' r='3.6' fill='%23f79824'/%3E%3Ccircle cx='48' cy='29' r='1.5' fill='%23ffd166'/%3E%3Ccircle cx='48' cy='41' r='5.6' fill='%23e07b12'/%3E%3Ccircle cx='48' cy='41' r='3.2' fill='%23f79824'/%3E%3Ccircle cx='48' cy='41' r='1.4' fill='%23ffd166'/%3E%3Ccircle cx='48' cy='52' r='5' fill='%23e07b12'/%3E%3Ccircle cx='48' cy='52' r='2.8' fill='%23f79824'/%3E%3Ccircle cx='48' cy='60' r='3' fill='%23c9622c'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat-x;
+  background-size: 100% 9px, 64px 96px;
+  background-position: top center, 0 7px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,.35));
+}
 
 .door {
   position: absolute; top: 0; bottom: 0; width: 50.5%;
   background:
-    linear-gradient(90deg, rgba(0,0,0,.28), transparent 22%, transparent 78%, rgba(0,0,0,.28)),
-    repeating-linear-gradient(0deg, transparent 0 84px, rgba(201,162,39,.16) 84px 86px),
-    linear-gradient(160deg, var(--maroon-2), var(--maroon) 55%, #45060e);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 6 54 30 30 54 6 30Z' fill='none' stroke='%23e8c96a' stroke-opacity='.10' stroke-width='1.2'/%3E%3Ccircle cx='30' cy='30' r='2' fill='%23e8c96a' fill-opacity='.12'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, rgba(0,0,0,.38), transparent 22%, rgba(255,225,150,.05) 50%, transparent 78%, rgba(0,0,0,.38)),
+    linear-gradient(180deg, transparent 72%, rgba(0,0,0,.32)),
+    linear-gradient(160deg, var(--maroon-2), var(--maroon) 55%, #3f050d);
+  background-size: 60px 60px, auto, auto, auto;
   transition: transform 2.3s cubic-bezier(.72,.05,.18,1);
   z-index: 2;
   will-change: transform;
@@ -81,33 +95,61 @@ body.opened .page-frame { opacity: .85; }
   transform: translateZ(0);
 }
 /* gold edge where the two door leaves meet — literal door trim */
-.door-left  { left: 0;  transform-origin: left center;  border-right: 4px solid var(--gold); }
-.door-right { right: 0; transform-origin: right center; border-left: 4px solid var(--gold); }
+.door-left  { left: 0;  transform-origin: left center;  border-right: 5px solid var(--gold); }
+.door-right { right: 0; transform-origin: right center; border-left: 5px solid var(--gold); }
 
-/* ornate panel drawn on each door */
+/* golden doorway arch framing both door leaves */
+.cover-arch {
+  position: absolute; inset: 94px 10px 10px; z-index: 3; pointer-events: none;
+  border: 2px solid rgba(232,201,106,.6);
+  border-bottom: none;
+  border-top-left-radius: 50% 18%;
+  border-top-right-radius: 50% 18%;
+}
+.cover-arch::before {
+  content: ""; position: absolute; inset: 7px 7px 0;
+  border: 1px solid rgba(201,162,39,.4);
+  border-bottom: none;
+  border-top-left-radius: 50% 18%;
+  border-top-right-radius: 50% 18%;
+}
+
+/* paneled door leaf: top medallion panel, studded middle band, calm base */
 .door-motif {
-  position: absolute; inset: 26px 20px;
-  border: 1.5px solid rgba(232,201,106,.65);
-  border-radius: 130px 130px 8px 8px;
-  background:
-    radial-gradient(circle at 50% 18%, rgba(232,201,106,.22), transparent 45%),
-    repeating-radial-gradient(circle at 50% 110%, transparent 0 26px, rgba(201,162,39,.12) 26px 28px);
+  position: absolute; inset: 122px 16px 24px;
+  border: 1.5px solid rgba(232,201,106,.6);
+  outline: 1px solid rgba(201,162,39,.4);
+  outline-offset: 4px;
+  border-radius: 14px 14px 10px 10px;
+  background-image:
+    radial-gradient(circle at 50% 8%, rgba(232,201,106,.14), transparent 40%),
+    linear-gradient(rgba(232,201,106,.45), rgba(232,201,106,.45)),
+    linear-gradient(rgba(232,201,106,.45), rgba(232,201,106,.45));
+  background-repeat: no-repeat;
+  background-size: auto, 100% 1.5px, 100% 1.5px;
+  background-position: 0 0, 0 27%, 0 73%;
 }
+/* lotus medallion boss in the top panel */
 .door-motif::before {
-  content: ""; position: absolute; inset: 12px;
-  border: 1px dashed rgba(232,201,106,.4);
-  border-radius: 116px 116px 6px 6px;
+  content: ""; position: absolute; top: 9%; left: 50%; width: 54px; height: 54px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%, #f3d98b, var(--gold) 55%, #9a7a17);
+  border: 2px solid var(--gold-3);
+  box-shadow:
+    0 0 0 4px rgba(92,10,20,.55),
+    0 0 0 5px rgba(232,201,106,.55),
+    0 6px 14px rgba(0,0,0,.45);
 }
-/* door handles */
-.door-left  .door-motif::after,
-.door-right .door-motif::after {
-  content: ""; position: absolute; top: 50%; width: 14px; height: 44px;
-  border: 2px solid var(--gold-2); border-radius: 8px;
-  background: radial-gradient(circle at 50% 30%, var(--gold-2), var(--gold));
-  box-shadow: 0 3px 8px rgba(0,0,0,.45);
+/* middle band of brass bosses, like temple doors */
+.door-motif::after {
+  content: ""; position: absolute; left: 9%; right: 9%; top: 31%; bottom: 31%;
+  border: 1px solid rgba(232,201,106,.35);
+  border-radius: 8px;
+  background-image:
+    radial-gradient(circle at 13px 15px, rgba(246,228,179,.9) 0 1.9px, rgba(154,122,23,.9) 2.3px, rgba(60,6,12,.5) 2.8px, transparent 3.4px);
+  background-size: 26px 30px;
 }
-.door-left  .door-motif::after { right: 8px; }
-.door-right .door-motif::after { left: 8px; }
 
 #cover.opening .door-left  { transform: rotateY(-105deg); }
 #cover.opening .door-right { transform: rotateY(105deg); }

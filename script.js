@@ -216,7 +216,6 @@ function spawnPetals(container, count, once = false) {
   }
 }
 spawnPetals($('heroPetals'), 14);
-spawnPetals($('coverPetals'), 8);
 
 /* ---------- opening the invitation ---------- */
 const cover = $('cover');
