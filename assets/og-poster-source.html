@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<title>OG Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ramaraja&family=Mandali&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #faf6ea; --cream: #f4edda; --cream-2: #efe6cf;
+    --gold: #b9924f; --gold-2: #d2b076; --gold-ink: #997434;
+    --line: #cdbb93; --ink: #6b5a41; --ink-soft: #8a775b;
+    --rose: #c9628f; --rose-2: #da86ad; --sage: #9db18f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: 'Mandali', serif;
+    color: var(--ink);
+    background: radial-gradient(circle at 50% 30%, #fffdf3, var(--ivory) 58%, var(--cream));
+    position: relative;
+  }
+  /* thin double gold frame */
+  .frame {
+    position: absolute; inset: 20px;
+    border: 1.5px solid var(--line);
+    outline: 1.5px solid var(--line);
+    outline-offset: 5px;
+    pointer-events: none;
+  }
+  /* corner florals */
+  .floral { position: absolute; width: 250px; height: auto; opacity: .95; }
+  .f-tl { top: 34px; left: 30px; }
+  .f-tr { top: 34px; right: 30px; transform: scaleX(-1); }
+  .f-bl { bottom: 34px; left: 30px; transform: scaleY(-1); }
+  .f-br { bottom: 34px; right: 30px; transform: rotate(180deg); }
+
+  /* faint dome backdrop at bottom center */
+  .dome {
+    position: absolute; left: 50%; bottom: -70px; transform: translateX(-50%);
+    width: 230px; opacity: .5;
+  }
+
+  .card {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding-bottom: 14px;
+  }
+  .sri {
+    font-family: 'Ramaraja', serif;
+    color: var(--gold-ink);
+    font-size: 26px; letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .monogram {
+    display: flex; align-items: baseline; gap: 14px;
+    font-family: 'Great Vibes', cursive;
+    color: var(--gold-ink);
+    margin-bottom: 2px;
+  }
+  .monogram span { font-size: 64px; line-height: 1; }
+  .monogram i { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; color: var(--gold-2); }
+  .names-te {
+    font-family: 'Ramaraja', serif;
+    font-size: 78px; line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: 1px;
+  }
+  .names-en {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 34px; font-weight: 500;
+    color: var(--ink-soft);
+    letter-spacing: 3px;
+    margin-top: 2px;
+  }
+  .names-en .heart { color: var(--rose); font-style: normal; }
+  .divider {
+    display: flex; align-items: center; gap: 14px;
+    color: var(--gold-2); margin: 18px 0 14px;
+  }
+  .divider::before, .divider::after {
+    content: ''; display: block; width: 130px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--line));
+  }
+  .divider::after { background: linear-gradient(to left, transparent, var(--line)); }
+  .divider span { font-size: 18px; }
+  .date-te {
+    font-family: 'Ramaraja', serif;
+    font-size: 33px; color: var(--gold-ink); letter-spacing: 1px;
+  }
+  .date-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px; letter-spacing: 5px;
+    color: var(--ink-soft);
+    margin-top: 4px; text-transform: uppercase;
+  }
+  .invite-line {
+    font-family: 'Mandali', serif;
+    font-size: 23px; color: var(--ink-soft);
+    margin-top: 20px;
+  }
+  .invite-line b { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-style: italic; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <g id="floral">
+        <ellipse cx="18" cy="30" rx="11" ry="5" fill="#9db18f" transform="rotate(-35 18 30)"/>
+        <ellipse cx="66" cy="12" rx="10" ry="4.5" fill="#8ba377" transform="rotate(20 66 12)"/>
+        <ellipse cx="46" cy="40" rx="10" ry="4.5" fill="#9db18f" transform="rotate(60 46 40)"/>
+        <circle cx="28" cy="14" r="8.5" fill="#c9628f"/>
+        <circle cx="42" cy="22" r="10" fill="#da86ad"/>
+        <circle cx="16" cy="24" r="7" fill="#e7a9c6"/>
+        <circle cx="56" cy="14" r="7.5" fill="#c9628f"/>
+        <circle cx="58" cy="30" r="8.5" fill="#da86ad"/>
+        <circle cx="34" cy="34" r="7" fill="#c9628f"/>
+        <circle cx="70" cy="24" r="6" fill="#e7a9c6"/>
+        <circle cx="28" cy="14" r="2" fill="#f8e7ef"/>
+        <circle cx="42" cy="22" r="2.2" fill="#f8e7ef"/>
+        <circle cx="56" cy="14" r="1.8" fill="#f8e7ef"/>
+        <circle cx="58" cy="30" r="2" fill="#f8e7ef"/>
+        <circle cx="34" cy="34" r="1.6" fill="#f8e7ef"/>
+      </g>
+    </defs>
+  </svg>
+
+  <div class="frame"></div>
+
+  <svg class="floral f-tl" viewBox="0 0 80 48"><use href="#floral"/></svg>
+  <svg class="floral f-tr" viewBox="0 0 80 48"><use href="#floral"/></svg>
+  <svg class="floral f-bl" viewBox="0 0 80 48"><use href="#floral"/></svg>
+  <svg class="floral f-br" viewBox="0 0 80 48"><use href="#floral"/></svg>
+
+  <div class="card">
+    <p class="sri">|| శ్రీ ||</p>
+    <div class="monogram"><span>L</span><i>&amp;</i><span>P</span></div>
+    <p class="names-te">లావణ్య &nbsp;&amp;&nbsp; ప్రసన్న కుమార్</p>
+    <p class="names-en">Lavanya <span class="heart">♥</span> Prasanna Kumar</p>
+    <div class="divider"><span>✦</span></div>
+    <p class="date-te">ఆదివారం, 30 ఆగస్టు 2026</p>
+    <p class="date-en">Sunday · 30 August 2026</p>
+    <p class="invite-line">మా వివాహానికి సాదర ఆహ్వానం &nbsp;·&nbsp; <b>You are cordially invited</b></p>
+  </div>
+
+</body>
+</html>
