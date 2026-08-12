@@ -85,7 +85,7 @@ body.opened .page-frame { opacity: .85; }
   position: absolute; top: 0; bottom: 0; width: 50.5%;
   background:
     linear-gradient(90deg, rgba(0,0,0,.35), transparent 24%, rgba(255,225,150,.06) 50%, transparent 76%, rgba(0,0,0,.35)),
-    linear-gradient(180deg, #b8873c, #96662a 55%, #7a4d1a);
+    linear-gradient(160deg, var(--maroon-2), var(--maroon) 55%, #3f050d);
   transition: transform 2.6s cubic-bezier(.77,0,.18,1) .3s;
   z-index: 2;
   will-change: transform;
@@ -125,22 +125,6 @@ body.opened .page-frame { opacity: .85; }
   0%   { opacity: 0; transform: scaleX(.2); }
   30%  { opacity: 1; transform: scaleX(8); }
   100% { opacity: 0; transform: scaleX(70); }
-}
-
-/* golden doorway arch framing both door leaves */
-.cover-arch {
-  position: absolute; inset: 98px 8px 8px; z-index: 3; pointer-events: none;
-  border: 2px solid rgba(246,228,179,.55);
-  border-bottom: none;
-  border-top-left-radius: 50% 9%;
-  border-top-right-radius: 50% 9%;
-}
-.cover-arch::before {
-  content: ""; position: absolute; inset: 6px 6px 0;
-  border: 1px solid rgba(201,162,39,.4);
-  border-bottom: none;
-  border-top-left-radius: 50% 9%;
-  border-top-right-radius: 50% 9%;
 }
 
 #cover.opening .door-left  { transform: rotateY(-108deg); }
