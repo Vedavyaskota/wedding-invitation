@@ -4,8 +4,8 @@
    ============================================================ */
 
 const CONFIG = {
-  // Drop your looping track next to index.html with this name.
-  music: 'music.mp3',
+  // Looping track next to index.html (bump ?v= if you ever swap the file).
+  music: 'music.mp3?v=2',
 
   // Countdown target = muhurtham date & time (IST).
   // ⚠ Time is a placeholder (10:00 AM) — update when the lagnam is fixed.
