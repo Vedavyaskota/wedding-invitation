@@ -29,113 +29,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body class="locked">
 
-  <!-- shared carved-door artwork (one leaf; right door mirrors it) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#7a1220"/>
-        <stop offset=".55" stop-color="#5c0a14"/>
-        <stop offset="1" stop-color="#3f050d"/>
-      </linearGradient>
-      <linearGradient id="woodPanel" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#6d1120"/>
-        <stop offset="1" stop-color="#490810"/>
-      </linearGradient>
-      <pattern id="lattice" width="12" height="12" patternUnits="userSpaceOnUse">
-        <path d="M0 0 L12 12 M12 0 L0 12" stroke="#e0c264" stroke-width="1"/>
-      </pattern>
-      <g id="leafArt">
-        <!-- door plate + frames -->
-        <rect x="4" y="4" width="202" height="732" rx="8" fill="url(#wood)" stroke="#2e030a" stroke-width="2"/>
-        <path d="M40 20 q6 180 -2 700 M105 15 q-5 200 3 710 M170 22 q4 190 -3 700" stroke="#2e030a" stroke-width="1" fill="none" opacity=".22"/>
-        <rect x="14" y="14" width="182" height="712" rx="6" fill="none" stroke="#e8c96a" stroke-width="1.5"/>
-        <rect x="19" y="19" width="172" height="702" rx="5" fill="none" stroke="#8a6d14" stroke-width="4" stroke-dasharray="0.1 11" stroke-linecap="round"/>
-
-        <!-- ===== TOP PANEL: deity niche + pillars + jaali window ===== -->
-        <rect x="26" y="30" width="158" height="272" rx="6" fill="url(#woodPanel)" stroke="#3c060e" stroke-width="1.5"/>
-        <path d="M38 230 V126 Q38 96 66 82 Q94 96 94 126 V230 Z" fill="#430711" stroke="#e8c96a" stroke-width="1.5"/>
-        <path d="M44 230 V130 Q44 102 66 90 Q88 102 88 130 V230 Z" fill="#38050d"/>
-        <path d="M66 118 l5 10 h-10 z" fill="#e0c264"/>
-        <circle cx="66" cy="138" r="7" fill="#e0c264" stroke="#6b4d10"/>
-        <path d="M57 149 Q66 144 75 149 L78 172 Q66 179 54 172 Z" fill="#d4af4a" stroke="#6b4d10"/>
-        <path d="M57 153 L48 168 M48 140 V192" stroke="#d4af4a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-        <path d="M75 153 L84 165" stroke="#d4af4a" stroke-width="3.5" stroke-linecap="round"/>
-        <path d="M56 176 L53 208 H79 L76 176 Q66 182 56 176 Z" fill="#c9a227" stroke="#6b4d10"/>
-        <rect x="50" y="210" width="32" height="7" rx="3" fill="#b3922f" stroke="#6b4d10"/>
-        <path d="M52 221 q7 6 14 0 q7 6 14 0" stroke="#e8c96a" stroke-width="1.5" fill="none"/>
-        <g transform="translate(66 262)">
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8"/>
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(45)"/>
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(90)"/>
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(135)"/>
-          <circle r="4" fill="#e8c96a"/>
-        </g>
-        <g fill="#b3922f" stroke="#6b4d10">
-          <rect x="101" y="92" width="16" height="8" rx="2"/>
-          <rect x="104" y="100" width="10" height="190"/>
-          <rect x="101" y="290" width="16" height="8" rx="2"/>
-          <rect x="165" y="92" width="16" height="8" rx="2"/>
-          <rect x="168" y="100" width="10" height="190"/>
-          <rect x="165" y="290" width="16" height="8" rx="2"/>
-        </g>
-        <path d="M108 104 V286 M111 104 V286 M172 104 V286 M175 104 V286" stroke="#8a6d14" stroke-width="1"/>
-        <path d="M118 290 V132 Q118 104 141 100 Q164 104 164 132 V290 Z" fill="#38050d" stroke="#e8c96a" stroke-width="1.5"/>
-        <path d="M122 288 V134 Q122 108 141 104 Q160 108 160 134 V288 Z" fill="url(#lattice)"/>
-        <circle cx="141" cy="94" r="4" fill="#e8c96a"/>
-        <path d="M141 84 l3.5 6 h-7 z" fill="#e8c96a"/>
-
-        <!-- rail -->
-        <rect x="26" y="306" width="158" height="26" rx="4" fill="#b3922f" stroke="#6b4d10"/>
-        <line x1="34" y1="319" x2="176" y2="319" stroke="#e8c96a" stroke-width="4" stroke-dasharray="0.1 10" stroke-linecap="round" opacity=".9"/>
-
-        <!-- ===== MIDDLE PANEL: elephant with raised trunk + rosette + vines ===== -->
-        <rect x="26" y="336" width="158" height="206" rx="6" fill="url(#woodPanel)" stroke="#3c060e" stroke-width="1.5"/>
-        <g transform="translate(52 366)">
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8"/>
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(45)"/>
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(90)"/>
-          <ellipse rx="13" ry="4.5" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(135)"/>
-          <circle r="4" fill="#e8c96a"/>
-        </g>
-        <path d="M36 400 q-6 -10 4 -14 q11 -4 12 6 q1 8 -8 8 M40 520 q-8 -6 -2 -14 q7 -8 14 -1 M172 508 q8 8 2 16" stroke="#8a6d14" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M58 462 q-10 14 -4 26" stroke="#6b4d10" stroke-width="2.5" fill="none"/>
-        <ellipse cx="102" cy="478" rx="46" ry="33" fill="#b3922f" stroke="#6b4d10" stroke-width="2"/>
-        <rect x="66" y="498" width="13" height="34" rx="4" fill="#b3922f" stroke="#6b4d10"/>
-        <rect x="92" y="504" width="13" height="30" rx="4" fill="#b3922f" stroke="#6b4d10"/>
-        <rect x="120" y="500" width="13" height="33" rx="4" fill="#b3922f" stroke="#6b4d10"/>
-        <path d="M66 528 h13 M92 530 h13 M120 529 h13" stroke="#e8c96a" stroke-width="2"/>
-        <circle cx="152" cy="458" r="21" fill="#b3922f" stroke="#6b4d10" stroke-width="2"/>
-        <path d="M140 448 Q126 436 136 428 Q150 424 152 440 Z" fill="#8a6d14" stroke="#6b4d10"/>
-        <path d="M168 446 Q186 436 184 414 Q182 400 171 404 Q178 414 170 424 Q158 436 156 448" fill="#b3922f" stroke="#6b4d10" stroke-width="1.8"/>
-        <path d="M162 470 q8 8 16 6" stroke="#e8c98f" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <circle cx="150" cy="454" r="2.2" fill="#3c2508"/>
-        <path d="M74 452 Q102 438 130 448 L126 472 Q102 462 80 472 Z" fill="#c9a227" stroke="#e8c96a" stroke-width="1.2"/>
-        <circle cx="94" cy="456" r="1.8" fill="#e8c96a"/>
-        <circle cx="108" cy="454" r="1.8" fill="#e8c96a"/>
-        <path d="M136 444 Q152 430 168 442" stroke="#e8c96a" stroke-width="2.5" fill="none"/>
-
-        <!-- rail -->
-        <rect x="26" y="546" width="158" height="26" rx="4" fill="#b3922f" stroke="#6b4d10"/>
-        <line x1="34" y1="559" x2="176" y2="559" stroke="#e8c96a" stroke-width="4" stroke-dasharray="0.1 10" stroke-linecap="round" opacity=".9"/>
-
-        <!-- ===== BOTTOM PANEL: diamond floral medallion ===== -->
-        <rect x="26" y="576" width="158" height="150" rx="6" fill="url(#woodPanel)" stroke="#3c060e" stroke-width="1.5"/>
-        <path d="M105 588 L158 651 L105 714 L52 651 Z" fill="#430711" stroke="#e8c96a" stroke-width="1.5"/>
-        <g transform="translate(105 651)">
-          <ellipse rx="16" ry="6" fill="#c9a227" stroke="#8a6d14" stroke-width=".8"/>
-          <ellipse rx="16" ry="6" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(45)"/>
-          <ellipse rx="16" ry="6" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(90)"/>
-          <ellipse rx="16" ry="6" fill="#c9a227" stroke="#8a6d14" stroke-width=".8" transform="rotate(135)"/>
-          <circle r="5" fill="#e8c96a"/>
-        </g>
-        <path d="M34 588 q10 2 10 12 M176 588 q-10 2 -10 12 M34 714 q10 -2 10 -12 M176 714 q-10 -2 -10 -12" stroke="#8a6d14" stroke-width="2" fill="none" stroke-linecap="round"/>
-      </g>
-    </defs>
-  </svg>
 
   <!-- thin double gold frame around the whole page, like a printed shubhalekha -->
   <div class="page-frame" aria-hidden="true"></div>
@@ -145,8 +42,8 @@
        ============================================================ -->
   <div id="cover" role="button" tabindex="0" aria-label="Open the invitation">
     <div class="cover-glow" aria-hidden="true"></div>
-    <div class="door door-left" aria-hidden="true"><svg class="leaf" viewBox="0 0 210 740" preserveAspectRatio="xMidYMax meet"><use href="#leafArt"/></svg></div>
-    <div class="door door-right" aria-hidden="true"><svg class="leaf" viewBox="0 0 210 740" preserveAspectRatio="xMidYMax meet"><use href="#leafArt"/></svg></div>
+    <div class="door door-left" aria-hidden="true"><span class="door-motif"><i class="door-gem"></i></span></div>
+    <div class="door door-right" aria-hidden="true"><span class="door-motif"><i class="door-gem"></i></span></div>
     <div class="light-beam" aria-hidden="true"></div>
     <div class="cover-toranam" aria-hidden="true"></div>
 
